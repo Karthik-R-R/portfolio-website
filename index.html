@@ -14,15 +14,25 @@
         </div>
     </header>
 
-    <section class="about">
+    <nav>
         <div class="container">
-            <img src="./MyPic.jpeg" alt="Karthik R R">
+            <ul>
+                <li><a href="#" onclick="showSections(['about', 'skills'])">About</a></li>
+                <li><a href="#" onclick="showSections(['projects', 'resume'])">Projects</a></li>
+                <li><a href="#" onclick="showSections(['contact'])">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="about" class="about" style="display: block;">
+        <div class="container">
+            <img src="MyPic.jpeg" alt="Karthik R R">
             <h2>About Me</h2>
-            <p>Welcome to my portfolio! I am a passionate web developer and designer with a keen eye for detail. I specialize in creating visually appealing and functional websites that leave a lasting impression.</p>
+            <p>Welcome to my Portfolio Website! I am a passionate web developer and designer. Currently I am studying my 3rd year of Engineering at DSATM Bengaluru. I specialize in creating visually appealing and functional websites that leave a lasting impression.</p>
         </div>
     </section>
 
-    <section class="skills">
+    <section id="skills" class="skills" style="display: block;">
         <div class="container">
             <h2>Skills</h2>
             <ul>
@@ -31,45 +41,66 @@
                 <li>JavaScript</li>
                 <li>Java</li>
                 <li>Python</li>
+                <li>Responsive Design</li>
             </ul>
         </div>
     </section>
 
-    <section class="projects">
+    <section id="projects" class="projects">
         <div class="container">
             <h2>Projects</h2>
             <div class="project">
-                <img src="./Food edited.png" alt="Project 1">
-                <h3>Food Website</h3>
-                <p>I did this sample food website to get a practical idea of what I am capable of doing using basic HTML and CSS. I indeed learnt a lot of new things while working on this project and it was my first project related to food.</p>
+                <a href="https://github.com/Karthik-R-R/blackjack-game" target="_blank">
+                    <img src="./blackjack.png" alt="Project 1">
+                </a>
+                <h3>BlackJack Game</h3>
+                <p>I did this BlackJack game to get started with learning JavaScript. I indeed learnt a lot of new things while working on this project and it was my first project related to a simple game.</p>
             </div>
             <div class="project">
-                <img src="./ChromeExt.png" alt="Project 2">
+                <a href="https://github.com/Karthik-R-R/leeds-tracker" target="_blank">
+                    <img src="ChromeExt.png" alt="Project 2">
+                </a>
                 <h3>Leeds Tracker chrome Extension</h3>
                 <p>I created this extension called "Leeds Tracker" as a part of me learning JavaScript. This project indeed helped me a lot to learn about JavaScript and Chrome API's. This extension works amazingly on both Google Chrome and MS Edge.</p>
             </div>
         </div>
     </section>
 
-    <section id="resume">
+    <section id="resume" class="resume">
         <div class="container">
-          <h2>Resume</h2>
-          <p>Download my <a href="./Kar CV.pdf" target="_blank">resume</a>.</p>
+            <h2>Resume</h2>
+            <p>Download my <a href="./Kar CV.pdf" target="_blank">resume</a>.</p>
         </div>
-      </section>
+    </section>
 
-    <section class="contact">
+    <section id="contact" class="contact">
         <div class="container">
             <h2>Contact</h2>
             <p>Feel free to reach out to me. Let's collaborate on exciting projects!</p>
-            <a href="mailto:kartnpbp@gmail.com" class="btn">Email me</a>
+            <a href="mailto:karthikrr@duck.com" class="btn">Email me</a>
+            <a href="https://github.com/Karthik-R-R/" class="btn" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/karthik-r-raghothama-148b89296/" class="btn" target="_blank">LinkedIn</a>
         </div>
     </section>
+    
 
     <footer>
         <div class="container">
             <p>&copy; 2024 Karthik R R. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        function showSections(sectionIds) {
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function(section) {
+                if (sectionIds.includes(section.id)) {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </body>
 </html>

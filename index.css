@@ -66,8 +66,8 @@ nav ul li a:hover {
     margin: 5px; 
     border-radius: 5px;
     text-align: center;
-    /* flex: 1 0 45%;
-    max-width: 45%;  */
+    flex: 1 0 20%;
+    max-width: 20%; 
 }
 
 .skills li:last-child {

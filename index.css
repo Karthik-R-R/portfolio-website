@@ -57,19 +57,23 @@ nav ul li a:hover {
     list-style: none;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; 
 }
 
 .skills li {
     background-color: #333;
-    padding: 10px;
-    margin-right: 10px;
+    padding: 10px 20px;
+    margin: 5px; 
     border-radius: 5px;
     text-align: center;
+    /* flex: 1 0 45%;
+    max-width: 45%;  */
 }
 
 .skills li:last-child {
     margin-right: 0;
 }
+
 
 .projects .project {
     text-align: center;
@@ -86,7 +90,6 @@ footer {
     color: #fff;
     text-align: center;
 }
-
 section:not(#about) {
     display: none;
 }
